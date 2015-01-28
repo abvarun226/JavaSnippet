@@ -3,6 +3,7 @@ package com.abvarun226.Concurrency;
 import java.util.concurrent.Phaser;
 
 /**
+ *
  * Created by bharghav on 1/28/15.
  */
 
@@ -18,9 +19,7 @@ class MyPhaser extends Phaser {
     protected boolean onAdvance(int phase, int numParties) {
         System.out.println("Phase " + phase + " completed\n");
 
-        if(phase == numPhases || numParties == 0) {
-            return true;
-        }
+        if(phase == numPhases || numParties == 0) return true;
         return false;
     }
 }
@@ -46,7 +45,7 @@ class MyThread3 implements Runnable {
             try {
                 Thread.sleep(10);
             } catch (InterruptedException e) {
-                System.out.println(e);
+                System.out.println(e.getMessage());
             }
         }
     }
