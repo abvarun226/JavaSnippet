@@ -36,7 +36,7 @@ class B {
         } catch (Exception e) {
             System.out.println("B interrupted!");
         }
-        System.out.println(name + "trying to call A.last()");
+        System.out.println(name + " trying to call A.last()");
         a.last();
     }
 
@@ -55,12 +55,14 @@ public class DemoDeadlock implements Runnable {
         Thread t = new Thread(this, "RacingThread");
         t.start();
 
-        a.foo(b);
+        //a.foo(b);
+        b.bar(a);
         System.out.println("Back in main thread");
     }
 
     public void run() {
-        b.bar(a);
+        //b.bar(a);
+        a.foo(b);
         System.out.println("Back in racing thread");
     }
 
