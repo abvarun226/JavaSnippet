@@ -11,7 +11,7 @@ import java.nio.file.*;
 public class ChannelBasedIOWrite {
     public static void main(String... args) {
 
-        try( SeekableByteChannel fChan = Files.newByteChannel(Paths.get("test.txt"), StandardOpenOption.CREATE, StandardOpenOption.WRITE); ) {
+        try( SeekableByteChannel fChan = Files.newByteChannel(Paths.get("data/test.txt"), StandardOpenOption.CREATE, StandardOpenOption.WRITE); ) {
 
             ByteBuffer mBuf = ByteBuffer.allocate(27*100);
 

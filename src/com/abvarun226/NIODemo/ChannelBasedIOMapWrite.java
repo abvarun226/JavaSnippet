@@ -11,7 +11,7 @@ import java.nio.file.*;
 public class ChannelBasedIOMapWrite {
     public static void main(String... args) {
 
-        try ( FileChannel fChan = (FileChannel) Files.newByteChannel(Paths.get("test.txt"), StandardOpenOption.READ, StandardOpenOption.CREATE, StandardOpenOption.WRITE); ) {
+        try ( FileChannel fChan = (FileChannel) Files.newByteChannel(Paths.get("data/test.txt"), StandardOpenOption.READ, StandardOpenOption.CREATE, StandardOpenOption.WRITE); ) {
 
             MappedByteBuffer mBuf = fChan.map(FileChannel.MapMode.READ_WRITE, 0, 27*3);
 

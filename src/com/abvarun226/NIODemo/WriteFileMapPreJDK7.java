@@ -15,7 +15,7 @@ public class WriteFileMapPreJDK7 {
         FileChannel fChan = null;
 
         try {
-            fOut = new RandomAccessFile("test1.txt", "rw");
+            fOut = new RandomAccessFile("data/test1.txt", "rw");
             fChan = fOut.getChannel();
 
             MappedByteBuffer mBuf = fChan.map(FileChannel.MapMode.READ_WRITE, 0, 27);

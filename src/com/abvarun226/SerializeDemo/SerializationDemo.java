@@ -24,7 +24,7 @@ class MyClass implements Serializable {
 public class SerializationDemo {
     public static void main(String... args) {
         System.out.println("Serialization : ");
-        try ( ObjectOutputStream objStream1 = new ObjectOutputStream(new FileOutputStream("serialize_file1.txt"))) {
+        try ( ObjectOutputStream objStream1 = new ObjectOutputStream(new FileOutputStream("data/serialize_file1.txt"))) {
             MyClass object1 = new MyClass("Hello", 120, 1e10);
             System.out.println("Object 1 : " + object1);
             objStream1.writeObject(object1);
@@ -33,7 +33,7 @@ public class SerializationDemo {
         }
 
         System.out.println("\nDeserialization : ");
-        try ( ObjectInputStream objStream2 = new ObjectInputStream(new FileInputStream("serialize_file1.txt"))) {
+        try ( ObjectInputStream objStream2 = new ObjectInputStream(new FileInputStream("data/serialize_file1.txt"))) {
             MyClass object2 = (MyClass)objStream2.readObject();
             System.out.println("Object 2 : " + object2);
         } catch (IOException e) {

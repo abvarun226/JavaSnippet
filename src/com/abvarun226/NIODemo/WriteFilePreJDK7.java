@@ -14,7 +14,7 @@ public class WriteFilePreJDK7 {
         FileChannel fChan = null;
 
         try {
-            fOut = new FileOutputStream("test.txt");
+            fOut = new FileOutputStream("data/test.txt");
             fChan = fOut.getChannel();
 
             ByteBuffer mBuf = ByteBuffer.allocate(27);

@@ -7,9 +7,9 @@ import java.sql.*;
  */
 
 public class mysqlConnect {
-    private static final String DBUSERNAME = "portal_user";
-    private static final String DBPASSWORD = "portal_user";
-    private static final String M_CONN_STRING = "jdbc:mysql://bf1opstool01.bcst.corp.bf1.yahoo.com/vpgops";
+    private static final String DBUSERNAME = "username";
+    private static final String DBPASSWORD = "password";
+    private static final String M_CONN_STRING = "jdbc:mysql://HOSTNAME/DBNAME";
     private static final String SQL = "select * from GomezData limit ?";
 
     public static void main(String[] args) throws SQLException {
