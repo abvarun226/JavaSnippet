@@ -1,5 +1,6 @@
 package com.abvarun226.NIODemo;
 
+
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.channels.*;
@@ -8,7 +9,7 @@ import java.nio.file.*;
 /**
  * Created by bharghav on 1/29/15.
  */
-public class ChannelBasedIOREAD {
+public class ChannelBasedIORead {
     public static void main(String... args) {
         Path filePath = null;
 
@@ -22,7 +23,7 @@ public class ChannelBasedIOREAD {
 //        }
 
         try ( // SeekableByteChannel fChan = Files.newByteChannel(filePath);
-            SeekableByteChannel fChan = Files.newByteChannel(Paths.get("/Users/bharghav/tools/bigxml.xml"));
+              SeekableByteChannel fChan = Files.newByteChannel(Paths.get("/Users/bharghav/tools/bigxml.xml"));
         ) {
 
             int count = fChan.read(mBuf);
